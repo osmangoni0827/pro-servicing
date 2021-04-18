@@ -1,0 +1,32 @@
+.CardStyle{
+    color: black;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.CardStyle img{
+    width: 70px;
+    height: 70px;
+    margin-top: 14px;
+}
+.CardStyle h5{
+    color: #28AFEA;
+}
+.CardStyle button{
+    margin-top: 10px;
+    border:1px solid #28AFEA;
+}
+
+.CardStyle button:hover{
+    background-color: white;
+    border:1px solid #008BD3;
+    color: #28AFEA;
+}
+
+.CardStyle:hover{
+    background-color: #DCDDDA;
+    transform: translate(500);
+}

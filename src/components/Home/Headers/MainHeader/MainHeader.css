@@ -1,0 +1,15 @@
+.MainHeaderStyle{
+    color: white;
+    height: 600px;
+    padding: 10px;
+    background-image: url('../../../../image/servicing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+.headLine h2{
+    font-size: 50px;
+}
+.headLine{
+    height: 400px;
+}
