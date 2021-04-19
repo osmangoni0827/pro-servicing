@@ -1,0 +1,48 @@
+.sidebar{
+    width: 300px;
+    height: 1000px;
+    padding: 15px;
+    background-image: linear-gradient(40deg, #c6cac9,#171818);
+    position: fixed;
+}
+.sidebar img{
+    display: block;
+    margin: 0px auto;
+    margin-top: 0px;
+    width: 150px;
+    padding-top: 0px;
+}
+.sidebar li{
+    color: white;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+.sidebar li h6{
+    padding: 0px;
+    margin: 0px;
+    color: wheat;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    /* transform: translate(5px); */
+}
+.Link{
+    text-decoration: none;
+}
+.sidebar svg{
+    margin-right: 5px;
+
+}
+
+/* .sidebar.StyleOption{
+display: none;
+text-decoration: none;
+}
+
+.sidebar.icon{
+display: block;
+}
+
+.sidebar.icon:hover.sidebar.StyleOption{
+    display: block;
+} */

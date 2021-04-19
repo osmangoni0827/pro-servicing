@@ -27,6 +27,6 @@
 }
 
 .CardStyle:hover{
-    background-color: #DCDDDA;
+    background-color: #f2f8e6;
     transform: translate(500);
 }

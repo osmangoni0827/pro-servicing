@@ -1,0 +1,30 @@
+.order{
+    margin: 0px auto;
+    text-align: center;
+}
+.order .payment{
+    margin: 0px auto;
+    width: 60%;
+}
+
+.form{
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+   
+}
+.form input{
+    width: 70%;
+    height: 60px;
+    margin: 10px auto;
+}
+.form .massage input{
+    height: 80px;
+}
+.contact button {
+    width: 200px;
+}
+.contact button:hover{
+    background-color: rgb(20, 20, 20);
+    color: rgb(247, 239, 239);
+}

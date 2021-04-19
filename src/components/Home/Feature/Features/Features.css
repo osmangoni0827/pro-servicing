@@ -1,9 +1,12 @@
 .FeaturesStyle{
-    height: 500px;
+    height: 600px;
     background-color: #eaecea;
     display: flex;
     justify-content: center;
     align-items:flex-end;
     text-align: center;
     /* padding-top: 150px; */
+}
+.feature{
+    padding-bottom: 100px;
 }
