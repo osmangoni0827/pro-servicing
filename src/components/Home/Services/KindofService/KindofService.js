@@ -7,7 +7,7 @@ const KindofService = ({service}) => {
     const HandleOrder=()=>{
         sessionStorage.setItem('orderPrice',price);
         sessionStorage.setItem('orderTitle',title);
-        history.push('/orderplace');
+        history.push('/dashboard/orderplace');
 
     }
     return (

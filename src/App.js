@@ -8,51 +8,69 @@ import {
 import Home from './components/Home/Home/Home';
 import Dashboard from './components/Dash-board/Dashboard/Dashboard';
 import AddService from './components/Dash-board/AddService/AddService';
-import Order from './components/Order/Order/Order';
 import OrderPlace from './components/Order/OrderPlace/OrderPlace';
 import DashboardOrderList from './components/Dash-board/DashboardOrderList/DasboardOrderList';
 import AddAdmin from './components/Dash-board/AddAdmin/AddAdmin';
 import OrderList from './components/Order/OrderList/OrderList';
 import Review from './components/Order/Review/Review';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/LogIn/PrivateRoute/PrivateRoute';
+import LogIn from './components/LogIn/LogIn';
+import SignUp from './components/SignUp/SignUp';
+import ManageService from './components/Dash-board/ManageService/ManageService';
+
+export const loggedInContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <Router>
+    <loggedInContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path='/home'>
+            <Home></Home>
+          </Route>
 
-      <Switch>
+          <PrivateRoute path='/admin/orderList'>
+            <DashboardOrderList></DashboardOrderList>
+          </PrivateRoute>
+          <PrivateRoute path='/dashboard/orderplace'>
+            <OrderPlace></OrderPlace>
+          </PrivateRoute>
+          <PrivateRoute path='/orderList'>
+            <OrderList></OrderList>
+          </PrivateRoute>
+          <PrivateRoute path='/addReview'>
+            <Review></Review>
+          </PrivateRoute>
 
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path='/home'>
-          <Home></Home>
-        </Route>
-        <Route path='/order'>
-          <Order></Order>
-        </Route>
-        <Route path='/orderplace'>
-          <OrderPlace></OrderPlace>
-        </Route>
-        <Route path='/orderList'>
-          <OrderList></OrderList>
-        </Route>
-        <Route path='/addReview'>
-          <Review></Review>
-        </Route>
+          <PrivateRoute path='/dashboard'>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path='/admin'>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path='/addService'>
+            <AddService></AddService>
+          </PrivateRoute>
+          <PrivateRoute path='/makeAdmin'>
+            <AddAdmin></AddAdmin>
+          </PrivateRoute>
+          <PrivateRoute path='/manageService'>
+            <ManageService></ManageService>
+          </PrivateRoute>
+          <Route path='/login'>
+            <LogIn></LogIn>
+          </Route>
+          <Route path='/signup'>
+            <SignUp></SignUp>
+          </Route>
+        </Switch>
+      </Router>
 
-        <Route path='/admin'>
-          <Dashboard></Dashboard>
-        </Route>
-        <Route path='/addService'>
-          <AddService></AddService>
-        </Route>
-        <Route path='/dashboard/OrderList'>
-          <DashboardOrderList></DashboardOrderList>
-        </Route>
-        <Route path='/makeAdmin'>
-          <AddAdmin></AddAdmin>
-        </Route>
-      </Switch>
-    </Router>
+    </loggedInContext.Provider>
 
   );
 }

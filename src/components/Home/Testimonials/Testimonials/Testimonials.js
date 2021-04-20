@@ -8,7 +8,7 @@ const Testimonials = () => {
         fetch('http://localhost:4500/review')
         .then(res=>res.json())
         .then(data=>setReview(data))
-    },[Review])
+    },[])
     return (
         <section className='testimonials'>
             <div className='container py-5'>

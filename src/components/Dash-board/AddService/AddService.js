@@ -21,7 +21,7 @@ const AddService = () => {
         price
     }
     console.log(NewService)
-    const HandleReviewButton = (e) => {
+    const HandleSubmitButton = (e) => {
         fetch('http://localhost:4500/addService', {
             method: "POST",
             headers: {
@@ -35,7 +35,7 @@ const AddService = () => {
                     alert('New Service Successfully Add')
                 }
             })
-        e.preventDefault();
+        // e.preventDefault();
     }
 
 
@@ -84,7 +84,7 @@ const AddService = () => {
                     <h2>Add New Service</h2>
                     <div className='addservice'>
                         <div className='form' >
-                            <form onSubmit={HandleReviewButton}>
+                            <form onSubmit={HandleSubmitButton}>
                                 <div className="form-group">
                                     <input type="text" onBlur={HandleInput} className="form-control" required name="ServiceName" aria-describedby="ServiceName" placeholder="Enter Service Name" />
                                 </div>

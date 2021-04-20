@@ -17,7 +17,7 @@ const Navbar = () => {
                             <Link to='/home' className="nav-link active text-white" aria-current="page" >Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/service' className="nav-link active text-white" aria-current="page" >Service</Link>
+                            <Link to='/' className="nav-link active text-white" aria-current="page" >Service</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/dashboard' className="nav-link active text-white" aria-current="page" >Dashboard</Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
                             <Link to='/admin' className="nav-link active text-white" aria-current="page" >Admin</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/contact' className="nav-link active text-white" aria-current="page" >Contact Us</Link>
+                            <Link to='/' className="nav-link active text-white" aria-current="page" >Contact Us</Link>
                         </li>
                     </ul>
                 </div>

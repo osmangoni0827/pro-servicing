@@ -34,7 +34,6 @@ const PaymentFrom = ({ formdata }) => {
       NewData.orderTitle = orderTitle;
       NewData.price = price;
       NewData.state = 'Pending'
-      console.log(NewData);
       saveAllData(NewData);
     }
   };

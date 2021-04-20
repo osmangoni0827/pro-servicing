@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { loggedInContext } from '../../../App';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
 import OrderInformation from '../OrderInformation/OrderInformation';
 
 
 const OrderList = () => {
 
+const [loggedInUser]=useContext(loggedInContext);
    const[orders,setorders]=useState([]);
    
-       fetch('http://localhost:4500/orderList',{
-           method:'POST',
-           headers:{
-               'Content-Type':'application/json'
-           },
-           body:JSON.stringify({})
-       })
-       .then(res=>res.json())
-       .then(data=>{
-           setorders(data)
-       })
+        useEffect(() => {
+            fetch('http://localhost:4500/orderList', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({ email: loggedInUser.email })
+            })
+                .then(res => res.json())
+                .then(data => setorders(data))
+        }, [loggedInUser.email])
    
     return (
         <div>
@@ -29,7 +29,7 @@ const OrderList = () => {
         <div className='orderList'>
                 <div className='row '>
                 {
-                    orders.map(order=><OrderInformation order={order}></OrderInformation>)
+                    orders.map(order=><OrderInformation key={order._id} order={order}></OrderInformation>)
                 }
                 </div>
             </div>
