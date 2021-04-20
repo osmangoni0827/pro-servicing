@@ -3,6 +3,7 @@ import './Services.css';
 import service from '../../../../image/servicepicter1.jpg';
 import KindofService from '../KindofService/KindofService';
 
+
 const Services = () => {
     const [Services,setService]=useState([]);
     useEffect(()=>{

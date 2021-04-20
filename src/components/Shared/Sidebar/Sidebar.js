@@ -32,7 +32,7 @@ const Sidebar = () => {
                 <li><h6>Menu</h6></li>
                     {isAdmin===false?<div>
                         <li>
-                            <Link to='/orderplace' className='text-white Link'>
+                            <Link to='/dashboard/orderplace' className='text-white Link'>
                                 <FontAwesomeIcon className='icon' icon={faCartPlus} /><span className='StyleOption'>Order</span>
                             </Link>
                         </li>
@@ -44,7 +44,7 @@ const Sidebar = () => {
                         </li>
 
                         <li>
-                            <Link to="/review" className="text-white Link">
+                            <Link to="/addReview" className="text-white Link">
                                 <FontAwesomeIcon className='icon' icon={faCommentDots} /> <span className='StyleOption'>Review</span>
                             </Link>
                         </li>
