@@ -39,7 +39,7 @@ const PaymentFrom = ({ formdata }) => {
   };
 
   const saveAllData = (data) => {
-    fetch('http://localhost:4500/addOrder', {
+    fetch('https://pacific-harbor-21117.herokuapp.com/addOrder', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

@@ -22,7 +22,7 @@ const AddService = () => {
     }
     console.log(NewService)
     const HandleSubmitButton = (e) => {
-        fetch('http://localhost:4500/addService', {
+        fetch('https://pacific-harbor-21117.herokuapp.com/addService', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const AddService = () => {
                     alert('New Service Successfully Add')
                 }
             })
-        // e.preventDefault();
+        e.preventDefault();
     }
 
 

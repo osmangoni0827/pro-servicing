@@ -11,7 +11,7 @@ const AddAdmin = () => {
     }
 
     const HandleReviewButton = (e) => {
-        fetch('http://localhost:4500/addAdmin', {
+        fetch('https://pacific-harbor-21117.herokuapp.com/addAdmin', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -21,7 +21,7 @@ const AddAdmin = () => {
             .then(res => res.json())
             .then(result => {
                 if (result) {
-                    alert('Your Review Successfully Done')
+                    alert('Your Admin Successfully Done')
                 }
             })
         e.preventDefault();

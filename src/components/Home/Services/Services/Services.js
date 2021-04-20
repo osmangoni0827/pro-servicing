@@ -6,7 +6,7 @@ import KindofService from '../KindofService/KindofService';
 const Services = () => {
     const [Services,setService]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4500/service')
+        fetch('https://pacific-harbor-21117.herokuapp.com/service')
         .then(res=>res.json())
         .then(data=>setService(data))
     },[])

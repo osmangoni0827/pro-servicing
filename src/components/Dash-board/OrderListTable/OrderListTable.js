@@ -5,7 +5,7 @@ const OrderListTable = ({ OrderInformation }) => {
     console.log(OrderInformation)
     const [id, setid] = useState('');
     const HandleSubmit = (e) => {
-        fetch('http://localhost:4500/update/' + id, {
+        fetch('https://pacific-harbor-21117.herokuapp.com/update/' + id, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ status: e.target.value })

@@ -14,7 +14,7 @@ const Review = () => {
   }
 
   const HandleReviewButton = (e) => {
-    fetch('http://localhost:4500/addReview', {
+    fetch('https://pacific-harbor-21117.herokuapp.com/addReview', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -27,7 +27,7 @@ const Review = () => {
           alert('Your Review Successfully Done')
         }
       })
-    // e.preventDefault();
+    e.preventDefault();
   }
 
 

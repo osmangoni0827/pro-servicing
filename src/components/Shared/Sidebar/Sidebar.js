@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Sidebar.css';
 import logo from '../../../image/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog,faCommentDots, faPlusCircle,faCartPlus, faSignOutAlt, faGripHorizontal, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCog,faCommentDots,faHome, faPlusCircle,faCartPlus, faSignOutAlt, faGripHorizontal, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { loggedInContext } from '../../../App';
@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [isAdmin, setAdmin] = useState(false);
     const email=loggedInUser.email||sessionStorage.getItem('email');
     useEffect(() => {
-        fetch('http://localhost:4500/isAdmin', {
+        fetch('https://pacific-harbor-21117.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email:email })
@@ -51,7 +51,7 @@ const Sidebar = () => {
 
                         <li>
                             <Link to="/home" className="text-white Link">
-                                <FontAwesomeIcon className='icon' icon={faCommentDots} /> <span className='StyleOption'>Home</span>
+                                <FontAwesomeIcon className='icon' icon={faHome} /> <span className='StyleOption'>Home</span>
                             </Link>
                         </li>
 
@@ -59,7 +59,7 @@ const Sidebar = () => {
                     <div>
                         <li>
                             <Link to="/home" className="text-white Link">
-                                <FontAwesomeIcon className='icon' icon={faCommentDots} /> <span className='StyleOption'>Home</span>
+                                <FontAwesomeIcon className='icon' icon={faHome} /> <span className='StyleOption'>Home</span>
                             </Link>
                         </li>
                         <li>

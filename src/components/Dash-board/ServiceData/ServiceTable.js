@@ -3,7 +3,7 @@ import React from 'react';
 const ServiceTable = ({service}) => {
 
     const HandleDeleteService=(id)=>{
-        fetch('http://localhost:4500/deleteService/'+id)
+        fetch('https://pacific-harbor-21117.herokuapp.com/deleteService/'+id)
         .then(res=>res.json())
         .then(data=>{
             if(data){

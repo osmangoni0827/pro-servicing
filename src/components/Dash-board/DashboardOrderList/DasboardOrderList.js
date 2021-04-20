@@ -7,7 +7,7 @@ const DashboardOrderList = () => {
     const [loggedInUser]=useContext(loggedInContext);
     const email=loggedInUser.email||sessionStorage.getItem('email');
     useEffect(() => {
-        fetch('http://localhost:4500/orderList', {
+        fetch('https://pacific-harbor-21117.herokuapp.com/orderList', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: email })
