@@ -6,7 +6,7 @@ const OrderPlace = () => {
     const orderTitle = sessionStorage.getItem('orderTitle')
     const price = sessionStorage.getItem('orderPrice')
     let email,name;
-    const [formData,setFormData]=useState({orderTitle})
+    const [formData,setFormData]=useState({orderTitle,price})
     
 
     const HandleInput=(e)=>{
@@ -48,9 +48,9 @@ const OrderPlace = () => {
                        <div className='payment'>
                        <h6>Pay With Visa Card</h6>
                         <ProcessPayment formdata={formData}></ProcessPayment>
+                        <p>Your Service Charged will be {price}</p>
                        </div>
                     </div>
-                   
                 </div>
             </div>
             

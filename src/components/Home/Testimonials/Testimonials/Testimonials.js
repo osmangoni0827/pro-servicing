@@ -1,27 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
 import './Testimonials.css';
-const TestimonialAll=[
-    {
-        title:'Great Customer Support',
-        description:'keep up the exilent work,Thank You So Much for your help. really it is unbelievable',
-        customerName:'Mitchel Johan',
-        customerTitle:'Co-Founder Info Labs'
-    },
-    {
-        title:'Great Customer Support',
-        description:'keep up the exilent work,Thank You So Much for your help. really it is unbelievable',
-        customerName:'Mitchel Johan',
-        customerTitle:'Co-Founder Info Labs'
-    },
-    {
-        title:'Great Customer Support',
-        description:'keep up the exilent work,Thank You So Much for your help. really it is unbelievable',
-        customerName:'Mitchel Johan',
-        customerTitle:'Co-Founder Info Labs'
-    }
-]
+
 const Testimonials = () => {
+    const [Review,setReview]=useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:4500/review')
+        .then(res=>res.json())
+        .then(data=>setReview(data))
+    },[Review])
     return (
         <section className='testimonials'>
             <div className='container py-5'>
@@ -29,7 +16,7 @@ const Testimonials = () => {
             <small>Real customers reviews</small>
             <div className='row'>
                 {
-                    TestimonialAll.map(review=><Testimonial review={review}></Testimonial>)
+                    Review.map(review=><Testimonial review={review}></Testimonial>)
                 }
             </div>
             </div>

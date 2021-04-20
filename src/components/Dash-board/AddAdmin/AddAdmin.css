@@ -1,4 +1,4 @@
-.addservice{
+.admin{
     margin: 0px auto;
     text-align: center;
     display: flex;
@@ -11,7 +11,7 @@
     margin: 0px auto;
    
 }
-.addservice .form button{
+.admin .form button{
     margin: 0px auto;
 }
 .form input{
@@ -20,10 +20,11 @@
     margin: 10px auto;
 }
 .form .description input{
-    height: 100px;
+    height: 120px;
 }
 
-.contact button:hover{
-    background-color: rgb(20, 20, 20);
+.admin button:hover{
+    background-color: #F8BC38;
+    border: 1px solid #FED55F;
     color: rgb(247, 239, 239);
 }

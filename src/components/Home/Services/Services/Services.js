@@ -1,29 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Services.css';
 import service from '../../../../image/servicepicter1.jpg';
 import KindofService from '../KindofService/KindofService';
-const AllServices=[
-    {
-        img:service,
-        title:'DATA BACKUP & RECOVERY',
-        description:'We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff',
-        price:'240'
-    },
-    {
-        img:service,
-        title:'DATA BACKUP & RECOVERY',
-        description:'We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff',
-        price:'100'
-    },
-    {
-        img:service,
-        title:'DATA BACKUP & RECOVERY',
-        description:'We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff',
-        price:'150'
-    }
 
-]
 const Services = () => {
+    const [Services,setService]=useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:4500/service')
+        .then(res=>res.json())
+        .then(data=>setService(data))
+    },[])
     return (
         <section className='services py-5'>
             
@@ -34,7 +20,7 @@ const Services = () => {
             <div className='container'>
                 <div className='row '>
                 {
-                    AllServices.map(service=><KindofService service={service}></KindofService>)
+                    Services.map(service=><KindofService service={service}></KindofService>)
                 }
                 </div>
             </div>

@@ -35,7 +35,7 @@ function App() {
         <Route path='/orderList'>
           <OrderList></OrderList>
         </Route>
-        <Route path='/review'>
+        <Route path='/addReview'>
           <Review></Review>
         </Route>
 
