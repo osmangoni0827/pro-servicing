@@ -1,5 +1,11 @@
-.footer img{
+
+.logopart img{
     width: 200px;
     padding-top: 0px;
     margin-top: 0px;
+    display: block;
+    margin: 0px auto
+}
+.logopart{
+    text-align: center;
 }

@@ -26,7 +26,7 @@ const Footer = () => {
         <footer className="footer clear-both">
             <div className="container pt-3">
                 <div className="row py-3">
-                <div className='col-12 col-md-3 col-sm-6 '>
+                <div className='col-12 col-md-3 col-sm-6 logopart'>
                     <img src={logofooter} alt=''></img>
                     <p>Pro Servicing is a Creative Servicing Company. We are Servicing Laptop,Mobile,Desktop and SmartPhone</p>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './ServiceTable.css';
 const ServiceTable = ({service}) => {
 
     const HandleDeleteService=(id)=>{
@@ -8,12 +8,11 @@ const ServiceTable = ({service}) => {
         .then(data=>{
             if(data){
                 document.getElementById(id).style.display='none'
-               console.log(data);
             }    
         })
     }
     return (
-        <table className="table table-borderless">
+        <table className="table table-borderless serviceTable">
             <thead>
                 <tr>
                 <th className="text-secondary text-left" scope="col">Sr No</th>
@@ -29,10 +28,10 @@ const ServiceTable = ({service}) => {
                   service.map((service, index) => 
                         
                     <tr style={{border:'2px solid'}} id={service._id}>
-                        <td>{index + 1}</td>
-                        <td>{service._id}</td>
-                        <td>{service.title}</td>
-                        <td>{service.price}</td>
+                        <td className='pt-3'>{index + 1}</td>
+                        <td className='pt-3'>{service._id}</td>
+                        <td className='pt-3'>{service.title}</td>
+                        <td className='pt-3'>{service.price}</td>
                         <td><button onClick={()=>HandleDeleteService(service._id)}>Delete</button></td>
                     </tr>
                     )

@@ -30,7 +30,7 @@ const OrderPlace = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className='col-md-9 col-10 col-sm-8'>
-                    <h2>Order</h2>
+                    <h2 className='text-center py-3'>Order Now</h2>
                     <div className='order'>
                         <div className='form' >
                             <form>
@@ -48,7 +48,7 @@ const OrderPlace = () => {
                        <div className='payment'>
                        <h6>Pay With Visa Card</h6>
                         <ProcessPayment formdata={formData}></ProcessPayment>
-                        <p>Your Service Charged will be {price}</p>
+                        <p>Your Service Charged will be ${price}</p>
                        </div>
                     </div>
                 </div>

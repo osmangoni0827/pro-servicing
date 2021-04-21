@@ -32,16 +32,16 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-
+          <Route path='/orderList'>
+            <OrderList></OrderList>
+          </Route>
           <PrivateRoute path='/admin/orderList'>
             <DashboardOrderList></DashboardOrderList>
           </PrivateRoute>
           <PrivateRoute path='/dashboard/orderplace'>
             <OrderPlace></OrderPlace>
           </PrivateRoute>
-          <PrivateRoute path='/orderList'>
-            <OrderList></OrderList>
-          </PrivateRoute>
+         
           <PrivateRoute path='/addReview'>
             <Review></Review>
           </PrivateRoute>

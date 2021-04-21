@@ -15,8 +15,8 @@ const ManageService = () => {
             <div className='col-md-3 col-2 col-sm-3'>
             <Sidebar></Sidebar>
             </div>
-            <div className="col-md-9 col-10 col-sm-9 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="text-brand">All Patients</h5>
+            <div className="col-md-9 col-10 col-sm-9 p-4 pr-5" style={{ position: "absolute", right: 0,  }}>
+                <h5 className="text-center">All Service List</h5>
                 <ServiceTable service={service} />
             </div>
         </div>

@@ -18,8 +18,8 @@ const OrderListTable = ({ OrderInformation }) => {
             })
     }
     return (
-        <table className="table table-borderless">
-            <thead>
+        <table className="table table-borderless ">
+            <thead >
                 <tr>
                     <th className="text-secondary text-left" scope="col">Sr No</th>
                     <th className="text-secondary" scope="col">Customer Name</th>

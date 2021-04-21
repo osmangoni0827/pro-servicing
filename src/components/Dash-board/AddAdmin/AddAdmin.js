@@ -59,7 +59,7 @@ const AddAdmin = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className='col-md-9 col-10 col-sm-8'>
-                    <h2>Add Admin</h2>
+                    <h2 className='text-center py-3'>Add Admin</h2>
                     <div className='admin'>
                         <div className='form' >
                             <form onSubmit={HandleReviewButton}>

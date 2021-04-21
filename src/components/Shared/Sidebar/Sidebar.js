@@ -23,7 +23,6 @@ const Sidebar = () => {
                 }
             })
     }, [loggedInUser.email])
-    console.log(isAdmin)
     return (
         <div className='sidebar'>
             <img src={logo} alt=''></img>

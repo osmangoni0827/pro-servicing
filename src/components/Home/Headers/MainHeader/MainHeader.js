@@ -14,7 +14,7 @@ const MainHeader = () => {
                     </p>
                 </div>
            </div>
-           <ServiceingProduct></ServiceingProduct>
+          
        </section>
     );
 };

@@ -6,6 +6,12 @@
     height: 300px;
     border: 1px solid gray;
     border-radius: 10px;
+    margin-bottom: 5px;
+    z-index: 500;
+}
+
+.CardStyle{
+    transform: translateY(-90px);
 }
 .CardStyle img{
     width: 70px;

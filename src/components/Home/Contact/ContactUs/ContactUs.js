@@ -21,7 +21,7 @@ const ContactUs = () => {
                 <div className="massage">
                     <input type="text" className="form-control" id="massage" placeholder="Massage" />
                 </div>
-                <button type="submit" className="btn btn-light">Submit</button>
+                <button type="submit" className="btn btn-light mb-3">Submit</button>
             </form>
             </div>
         </section>

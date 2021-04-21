@@ -4,6 +4,7 @@ import desktop from '../../../../image/settings.png';
 import printer from '../../../../image/print.png';
 import smartphone from '../../../../image/smartphone.png';
 import ServicieingPdCard from '../ServiceingPdCard/ServicieingPdCard';
+import './ServiceProduct.css';
 const ServiceingProducts=[
     {
         icon:laptop,
@@ -28,13 +29,15 @@ const ServiceingProducts=[
 ]
 const ServiceingProduct = () => {
     return (
-        <div className='container '>
-        <div className='row'>
-            {
-                ServiceingProducts.map(pd=><ServicieingPdCard product={pd}></ServicieingPdCard>)
-            }
-        </div>
-        </div>
+       <div className='product'>
+                <div className='container '>
+            <div className='row'>
+                {
+                    ServiceingProducts.map(pd=><ServicieingPdCard product={pd}></ServicieingPdCard>)
+                }
+            </div>
+            </div>
+       </div>
        
     );
 };

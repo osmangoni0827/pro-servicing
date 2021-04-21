@@ -1,5 +1,6 @@
 .dashboard{
-    background-image: url('../../../image/dashboard.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(40deg, #c6cac9,#171818);
+    position: fixed;
 }

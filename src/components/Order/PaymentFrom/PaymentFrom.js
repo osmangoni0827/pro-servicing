@@ -33,7 +33,7 @@ const PaymentFrom = ({ formdata }) => {
       NewData.email = email;
       NewData.orderTitle = orderTitle;
       NewData.price = price;
-      NewData.state = 'Pending'
+      NewData.status = 'Pending'
       saveAllData(NewData);
     }
   };

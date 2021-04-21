@@ -1,7 +1,8 @@
 .sidebar{
-    width: 300px;
+    width: 310px;
     height: 1000px;
     padding: 15px;
+    padding-right: 0px;
     background-image: linear-gradient(40deg, #c6cac9,#171818);
     position: fixed;
 }

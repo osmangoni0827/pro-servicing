@@ -6,21 +6,20 @@ const AddService = () => {
     const [Url, setUrl] = useState({});
     const [formData, setFormData] = useState({});
     const { title, description, price } = formData;
-   const [enableButton,setEnableButton]=useState(true);
-   
-   useEffect(()=>{
-    if(Url.length>0){
-        setEnableButton(false)
+    const [enableButton, setEnableButton] = useState(true);
+
+    useEffect(() => {
+        if (Url.length > 0) {
+            setEnableButton(false)
         }
-   },[Url])
-   
+    }, [Url])
+
     const NewService = {
         img: Url,
         title,
         description,
         price
     }
-    console.log(NewService)
     const HandleSubmitButton = (e) => {
         fetch('https://pacific-harbor-21117.herokuapp.com/addService', {
             method: "POST",
@@ -62,16 +61,16 @@ const AddService = () => {
     }
 
     const HandleImageUpload = (event) => {
-    const form = new FormData();
-    form.set('key','20eb4f4a88d3505364e15416b41a0df2');
-    form.append('image', event.target.files[0])
-    axios.post('https://api.imgbb.com/1/upload',
-    form)
-    .then(data=>{
-        console.log(data.data.data.display_url)
-        setUrl(data.data.data.display_url)
-    })
-    .catch(err=>console.log(err))
+        const form = new FormData();
+        form.set('key', '20eb4f4a88d3505364e15416b41a0df2');
+        form.append('image', event.target.files[0])
+        axios.post('https://api.imgbb.com/1/upload',
+            form)
+            .then(data => {
+                console.log(data.data.data.display_url)
+                setUrl(data.data.data.display_url)
+            })
+            .catch(err => console.log(err))
     }
 
     return (
@@ -81,7 +80,7 @@ const AddService = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className='col-md-9 col-10 col-sm-8'>
-                    <h2>Add New Service</h2>
+                    <h2 className='text-center py-3'>Add New Service</h2>
                     <div className='addservice'>
                         <div className='form' >
                             <form onSubmit={HandleSubmitButton}>
