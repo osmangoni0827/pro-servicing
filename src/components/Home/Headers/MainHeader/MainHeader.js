@@ -7,9 +7,9 @@ const MainHeader = () => {
        <section className='MainHeaderStyle'>
            <Navbar></Navbar>
            <div className=' d-flex headLine align-items-center justify-content-center'>
-                <div className=''>
+                <div className='text-center'>
                     <h2>Fast & Quick Fix</h2>
-                    <p>Just Send Valuable Laptop , Pc , Mac , Mobile
+                    <p >Just Send Valuable Laptop , Pc , Mac , Mobile
                         <br/>Gaming Device or Smartphone and We will take care of it
                     </p>
                 </div>
